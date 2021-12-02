@@ -1,0 +1,61 @@
+phương pháp includes method được dùng trong array và string nó thường được dùng để tìm phần tử có xuất hiện trong mảng hay string hay không
+ - tên mảng.includes('phần tử muốn tìm')
+
+forEach, find, filter,some, every,reduce.
+- muốn kiểm tra phần tử có nằm trong prototype ta làm như sau this.hasOwnProperty(phần tử kiểm tra) 
+- forEach
+Array.prototype.forEach = function(callback){
+  for(var index in this){
+    if(this.hasOwnProperty(index)){
+      callback(this[index],index,this);
+    }
+  }
+}
+- filter 
+Array.prototype.filter = function(callback){
+  var output = [];
+  for(var index in this){
+    if(this.hasOwnProperty(index)){
+      var result = callback(this[index],index,this);
+      if( result ){
+        output.push(this[index]);
+      }
+    }
+  }
+  return output;
+}
+- some nó kiểm tra tối thiểu 1 giá trị là true   và nó return về giá trị true or false
+Array.prototype.some = function(callback){
+  var output = false;
+  for(var index in this){
+    if(this.hasOwnProperty(index)){
+      if(callback(this[index],index,this))
+      output = true;
+      break;
+    }
+  }
+  return output;
+}
+- every nó kiểm tra các phần tử phải đúng nó mới trả về true còn chỉ cần 1 phần tử sai thì nó sẽ trả về false 
+Array.prototype.every = function(callback){
+  var output = true;
+  for(var index in this){
+    if(this.hasOwnProperty(index)){
+      if(!callback(this[index],index,this))
+      output = false;
+      break;
+    }
+  }
+  return output;
+}
+
+
+
+
+// HTML DOM ( Document Object Model) nó gồm có 3 thành phần chính là:
+- Element include: div, h1 , a, p, span, .....
+- Attribute include : các thuộc tính như class , id, color,.....
+để thêm các thuộc tính vào các element ta dùng setAttribute hoặc lấy ra các thuộc tính getAttribute
+- Text: các đoạn văn .....
+đề lấy ra hoặc chỉnh sửa  text trong các element ta dùng innerText, textContent
+- để thêm 1 element vào 1 element ta dùng innerHTML var addElement = document.querySelector('.box').innerHTML = '<h1>add</h1>'

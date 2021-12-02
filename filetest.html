@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     const obj = [
+//       {
+//         name: 'cat',
+//         age: 20,
+//         country: 'vietnam'
+//       },
+//       {
+//         name: 'bbb',
+//         age: 15,
+//         country: 'vietnam'
+//       },
+//       {
+//         name: 'bbbc',
+//         age: 21,
+//         country: 'Hàn quốc'
+//       }
+//     ]
+//     // dùng reduce thay thế cho map
+//     // var result = obj.reduce((total, value)=>{
+//     //   return [...total,value.country]
+//     // },[])
+
+//     // console.log(result)
+//     var result = obj.reduce((total, value)=>{
+//       return value.age > 15 ? [...total,value]:total
+//     },[])
+//     console.log(result)
+
+//       // var locmember = obj.filter(value => value.country ==='vietnam')
+//       // var showname = locmember.map(data => data.name)
+//       // console.log(showname)
+
+//     // var arr = obj.map((data)=>{
+      
+//     //   return data.age +1;
+//     // })
+//     // console.log(arr)
+//     // var result = obj.filter((data,index)=>{
+//     //   return index!==2
+//     // })
+//     // console.log(result)
+//     // obj1 = [{name:"ccc",age:32},...obj,{name:"ccc",age:32}]
+//     // console.log(obj1)
+//     // sắp xếp tang dần 
+//     // var tang = obj.sort((a,b)=>{return a.age>b.age?-1:1})
+//     // console.log(tang)
+//     // // sắp xếp giảm dần 
+//     // var giam = obj.sort((a,b)=>{return a.age>b.age?1:-1})
+//     // console.log(giam)
+//     let team = [
+//       {name: 'cong phuong', country: 'Viet Nam'},
+//       {name: 'Ronaldo', country: 'Portugal'},
+//       {name: 'Quang Hai', country: 'Viet Nam'},
+//       {name: 'Messi', country: 'Argentina'},
+//       {name: 'Nani', country: 'Portugal'},
+//     ]
+
+// //Nhiệm vụ chúng ta làm sao nhóm được các cầu thủ by quốc gia.
+
+
+
+// Array.prototype.groupBy = function(prop) {
+// return this.reduce(function(groups, item) {
+// const val = item[prop]
+// console.log(val)
+// groups[val] = groups[val] || []
+// groups[val].push(item)
+// return groups
+// }, {})
+// }
+
+// let data = team.groupBy('country'); 
+// console.log(data)
+// const actions = {
+//   '1': 'processing',
+//   '2': 'fail',
+//   '3': 'fail',
+//   '4': 'success',
+//   '5': 'cancel',
+//   'default': 'other'
+// }
+// var data = Object.entries(actions)
+//  console.log(data)
+  class students{
+    constructor(name, age){
+      this.name = name;
+      this.age = age;
+    }
+    getdata(){
+      return this.name;
+    }
+  }
+  let hs = new students('cat',10);
+  class data extends students{
+   constructor(name , age){
+     super(name, age);
+   }
+
+  }
+  console.log(hs.getdata())
+
+  </script>
+</body>
+</html>

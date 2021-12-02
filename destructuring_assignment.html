@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring Assignment</title>
+</head>
+<body>
+  <h1>learn destructuring assignment</h1>
+  <script>
+    // destructuring array
+    var number =['JavaScript' , 'PHP', 'ReactJS'];
+    var [a,b,c]  = number;
+    console.log(a,b,c)
+    // use destructuring array with rest parameters (...tên biến);
+    var number =['JavaScript' , 'PHP', 'ReactJS'];
+    var [a,...c]  = number; // use rest parameters trả về mảng có thể dùng đề xóa 1 biến trong mảng mà không cần dùng delete như c là 1 mảng mới gồm 2 phần tử 
+    console.log(a) // trả về JavaScript
+    console.log(c) // trả về array ['PHP', 'ReactJS']
+    // destructuring object
+    // có thể dùng với rest parameters
+    var courses = {
+      name:'Javascript',
+      price:1000,
+      description:'value description',
+      children:{
+        name : 'ReactJS'
+      }
+    }
+    // muốn đổi tên 1 biến sau khi dc gán ta dùng    tên biến : tên biến mới
+    var {name : nameCourses ,price : priceCourses} = courses; // name phải trùng với tên chứa trong object cần lấy 
+    console.log(nameCourses);
+    console.log(priceCourses);
+    // use rest parameters 
+    var {name , ...newObject} = courses; 
+    console.log(name);
+    console.log(newObject);
+    // khi trong courses nó có 1 object ta muốn mấy data trong object đó thì làm như sau nếu đề 2 name như nhau thì kết quá lấy ra nó sẽ lấy kết quả 
+    // của cái cuối vì vậy ta sẽ đổi tên 1 trong 2 name này
+    // nếu trên object chưa có biến description ta cũng có thể gán giá trị cho nó bằng cách     description = 'default description' 
+    // nếu trên object đã có biến description rồi và ta lại gán biến đó cho 1 giá trị khác thì nó vẫn sẽ lấy giá trị ở trên object
+    var {name : parentName ,children:{name }, description = 'default description' } = courses;
+    console.log(parentName);
+    console.log(name);
+    console.log(description); //  in ra value description
+
+    const blogs = {
+      anonsstick: [ 
+        {
+          pageFacebook:'tip Javascript Viet Nam',
+          likes: 4000,
+          daily : 1000
+        }
+      ]
+    }
+    // console.log(blogs.anonsstick[0].likes); // in ra value description/
+    // use destructuring assignment
+    const {
+      anonsstick: [
+        {
+          pageFacebook,
+          likes, 
+          daily
+        }
+      ]
+    } = blogs;
+    console.log("pageFacebook:",pageFacebook);
+    console.log("likes:",likes);
+    console.log("daily:",daily);
+
+    /* --------------------------------Spread()  and concat() ----------------------------------------------------------------*/
+    // dùng function concat để nối 2 mảng lại với nhau 
+   var courses1 = ['Javascript','php','react'];
+   var courses2 = ['Ruby','php','react'];
+   var result = courses2.concat(courses1);
+    console.log(result);
+    // ta dùng spread() để nối 2 mảng lại với nhau cách dùng ... giống như rest parameters nhưng ở đây nó chỉ bỏ 2 dấu [] , {} và giữ lại giá trị bên trong
+
+    var result2 = [...courses1,...courses2] //(6) ['Javascript', 'php', 'react', 'Ruby', 'php', 'react']
+    console.log(result2);
+    // with object 
+    var courses3 = {
+      name1:'Javascript',
+      price1:1000,
+      description1:'value description',
+      
+    }
+    var courses4 = {
+      name2:'ReactJS',
+      price2:5000,
+      description2:'value description',
+      
+    }
+    var result3 = {...courses3,...courses4} //
+    console.log(result3);
+    // using  destructuring assignment to get data from object result3
+    const {price1,name1, name2,price2} = result3;
+    console.log(price1,price2);
+    console.log(name1 , name2);
+
+  </script>
+  
+</body>
+</html>

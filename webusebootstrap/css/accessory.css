@@ -1,0 +1,252 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+body{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background:#fff;
+  
+}
+/**************************Header menu***********************************************/
+.my-navbar-nav{
+  width: 100%;
+}
+.navbar-brand img{
+  width: 110px;
+}
+.my-nav-item{
+  margin-right: 10px;
+  border-bottom: 3px solid transparent;
+}
+.my-nav-item a span{
+  color: #212121;
+
+}
+.my-nav-item:hover{
+ border-bottom-color: #3498db ;
+}
+.my-nav-item:hover a{
+  color: #212121;
+  
+}
+.my-nav-item.select{
+  border-bottom-color: #000 ;
+}
+/**************************Header menu***********************************************/
+/****************************************************************slide ********************************/
+.slide-block{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide-menu{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slide{  
+  width: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+  visibility: hidden;
+}
+
+.slide-block .slide-menu .slide img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;;
+ }
+.slide.active{
+  opacity:1;
+  visibility: visible;
+}
+
+.button-slide{
+  color: #fff;
+  font-size: 50px;
+  width: 100%;
+  height: 200px;
+  
+}
+.btn-prev{
+  position:absolute;
+  top: 100%;
+  left:0;
+  z-index: 10;
+  cursor: pointer;
+
+}
+.btn-next{
+  position:absolute;
+  top: 100%;
+  right:0;
+  z-index: 10;
+  cursor: pointer;
+
+}
+.button-slide ul{
+  position:absolute;
+  width:100px;
+  bottom: -150%;
+  left: 50%;
+  margin-left:-50px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+.button-slide ul li{
+  width:20px;
+  height:20px;
+  background-color:#fff;
+  opacity: 0.5;
+  list-style: none;
+  border-radius:50%;
+  cursor: pointer;
+  transition: 0.4s;
+
+}
+.button-slide ul li.active-btn{
+  opacity: 1;
+}
+.constant20{
+  margin-top:20px;
+}
+/****************************************************************slide ********************************/
+/**************************CONTENT**************************************************/
+
+.constant{
+  margin-top:390px;
+}
+.image-box{
+  width:100%;
+  height:260px;
+  text-align: center;
+}
+.image-box img{
+  display: block;
+  margin:auto;
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+.content-title-box{
+  width:100%;
+}
+.p-top{
+  margin-top: 50px;
+}
+/**************************CONTENT**************************************************/
+/**************************footer**************************************************/
+
+.footer{
+   background: #2d3436;
+   padding:15px;
+   margin-top: 50px;
+}
+.footer ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.footer-address{
+padding-left:10px;
+  
+}
+.footer-address h3{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  
+}
+.footer-address p{
+
+  font-weight: bold; 
+  color:#636e72;
+
+}
+.footer-address p:hover{
+  color:#fff;
+}
+.footer__group h3{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+.footer__group li a{
+  color:#636e72;
+  text-decoration: none;
+
+}
+.footer__group li:hover a{
+  color:#fff;
+
+
+}
+.footer__group li a i{
+  font-size: 12px;
+
+}
+.my-container{
+  margin: 0;
+}
+.copy-right{
+  background-color:#636e72;
+}
+.footer-copyright{
+  display:inline-block;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/**************************footer**************************************************/
+
+/*animation slide*/
+.hideLeft{
+  animation: hideLeft 1s forwards;
+}
+@-webkit-keyframes hideLeft{
+  from{
+    transform:translateX(0%)
+  }
+  to{
+    transform:translateX(-100%)
+  }
+}
+.showRight{
+  animation: showRight 1s forwards;
+}
+@-webkit-keyframes showRight{
+  from{
+    transform:translateX(100%)
+  }
+  to{
+    transform:translateX(0%)
+  }
+}
+.showLeft{
+  animation: showLeft 1s forwards;
+}
+@-webkit-keyframes showLeft{
+  from{
+    transform:translateX(-100%)
+  }
+  to{
+    transform:translateX(0%)
+  }
+}
+.hideRight{
+  animation: hideRight 1s forwards;
+}
+@-webkit-keyframes hideRight{
+  from{
+    transform:translateX(0%)
+  }
+  to{
+    transform:translateX(100%)
+  }
+}

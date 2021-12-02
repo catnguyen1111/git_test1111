@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Bar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/javascrip/slideBar/slide.css">
+
+</head>
+<body>
+  <header class="container">
+    
+    <div class="header-menu">
+      <ul class="header-menu-list">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="section">
+    <i class="section-icon fas fa-bars"></i>
+    <div class="sec1"></div>
+    <h1 id="about">About Section</h1>
+    <p>In this program (Responsive Chat Box UI Design), at first, on the webpage, there is only a messenger button on the right bottom corner and when you click on that button then the chatbox form appears with sliding animation and the icon of messenger also changed into a cross-sign icon. In the chatbox form, there are three input fields i.e. Name, Email, and Textarea) and a Button. This chat box is fully based on HTML & CSS, so when you filled up your info and click on the start chat button, this form won’t submit your info anywhere.
+    </p>
+    <div class="sec2"></div>
+
+    <h1 id="portfolio">Portfolio Section</h1>
+    <p>In this program (Responsive Chat Box UI Design), at first, on the webpage, there is only a messenger button on the right bottom corner and when you click on that button then the chatbox form appears with sliding animation and the icon of messenger also changed into a cross-sign icon. In the chatbox form, there are three input fields i.e. Name, Email, and Textarea) and a Button. This chat box is fully based on HTML & CSS, so when you filled up your info and click on the start chat button, this form won’t submit your info anywhere.
+    </p>
+    <div class="sec3"></div>
+    
+    <h1 id="gallery">Gallery Section</h1>
+    <p>In this program (Responsive Chat Box UI Design), at first, on the webpage, there is only a messenger button on the right bottom corner and when you click on that button then the chatbox form appears with sliding animation and the icon of messenger also changed into a cross-sign icon. In the chatbox form, there are three input fields i.e. Name, Email, and Textarea) and a Button. This chat box is fully based on HTML & CSS, so when you filled up your info and click on the start chat button, this form won’t submit your info anywhere.
+    </p>
+    <div class="sec4"></div>
+
+    <h1 id="services">Services Section</h1>
+    <p>In this program (Responsive Chat Box UI Design), at first, on the webpage, there is only a messenger button on the right bottom corner and when you click on that button then the chatbox form appears with sliding animation and the icon of messenger also changed into a cross-sign icon. In the chatbox form, there are three input fields i.e. Name, Email, and Textarea) and a Button. This chat box is fully based on HTML & CSS, so when you filled up your info and click on the start chat button, this form won’t submit your info anywhere.
+    </p>
+    <div class="sec5"></div>
+
+    <h1 id="feedback">Feedback Section</h1>
+    <p>In this program (Responsive Chat Box UI Design), at first, on the webpage, there is only a messenger button on the right bottom corner and when you click on that button then the chatbox form appears with sliding animation and the icon of messenger also changed into a cross-sign icon. In the chatbox form, there are three input fields i.e. Name, Email, and Textarea) and a Button. This chat box is fully based on HTML & CSS, so when you filled up your info and click on the start chat button, this form won’t submit your info anywhere.
+    </p>
+    <div class="sec6"></div>
+
+    <h1 id="contact">Contact Section</h1>
+    <p>In this program (Responsive Chat Box UI Design), at first, on the webpage, there is only a messenger button on the right bottom corner and when you click on that button then the chatbox form appears with sliding animation and the icon of messenger also changed into a cross-sign icon. In the chatbox form, there are three input fields i.e. Name, Email, and Textarea) and a Button. This chat box is fully based on HTML & CSS, so when you filled up your info and click on the start chat button, this form won’t submit your info anywhere.
+    </p>
+    <div class="sec7"></div>
+  </section>
+  <script>
+    $(document).ready(function(){
+      $(".section-icon").click(function(){
+        $(".header-menu").toggleClass("show-menu");
+        $(".section").toggleClass("slide-img");
+        $(".section-icon").toggleClass("slide-icon-fix");
+      })
+      $("li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      })
+    })
+  </script>
+  
+</body>
+</html>

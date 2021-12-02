@@ -1,0 +1,26 @@
+
+
+
+
+
+
+///////////////////////////////////////////////////////Arow Function//////////////////////////////////////////////////////////
+// var test = function (a,b) {
+//  return {
+//    name : a,
+//    age : b
+//  }
+// }
+// var test  = (name, age) => ({name:name,age:age})
+// console.log(test('cat',5))
+/**
+ * có thể dùng arow Function để viết ngắn gọn hàm lại 
+ * return về number
+ * var test = (a,b) => a+b;
+ * console.log(test(4,5))
+ * 
+ * dùng return về object ta thêm dấu () trước {}
+ * var test  = (name, age) => {name:name,age:age}  viết như z thì ta sẽ bị lỗi cú pháp vì vậy ta viết như sau:
+ * var test  = (name, age) => ({name:name,age:age})
+ */
+///////////////////////////////////////////////////////Arow Function//////////////////////////////////////////////////////////

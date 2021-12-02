@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="main">
+    <form action="" class="form" id="form-1">
+      <h3 class="heading">Thành viên đăng ký</h3>
+      <p class="description">Cùng nhau học lập trình miễn phí</p>
+      <div class="spacer"></div>
+      <div class="form-group">
+        <label for="fullName" class="form-label">Họ và Tên</label>
+        <input class="form-control" id="fullName" name = "fullName" type="text" placeholder="VD: Cat Nguyen">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="Email" class="form-label">Email</label>
+        <input class="form-control" id="Email" name = "Email" type="text" placeholder="VD: nguyenvancat145@gmail.com">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input class="form-control" id="password" name = "password" type="password" placeholder="Nhập mật khẩu">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="password_comfirmation" class="form-label">Nhập lại mật khẩu</label>
+        <input class="form-control" id="password_comfirmation" name = "password_comfirmation" type="password" placeholder="Nhập mật khẩu">
+        <span class="form-message"></span>
+      </div>
+      <button class="btn-submit">Đăng ký</button>
+    </form>
+  </div>
+  <script src="./validator.js"></script>
+  <script>
+    Validator({
+      form: '#form-1',
+      formGroupSelector:'.form-group',
+      rules:[
+        Validator.isRequired('#fullName'),
+        Validator.isEmail('#Email'),
+        Validator.minLenght('#password',6),
+        Validator.isConfirmed('#password_comfirmation',function(){
+          return document.querySelector('#form-1 #password').value
+        },'mật khẩu nhập lại không chính xác')
+      ],
+      onSubmit: function(data){
+        console.log(data);
+      }
+    });
+  </script>
+</body>
+</html>

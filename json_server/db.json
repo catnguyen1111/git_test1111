@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "kiến thức cơ bản, tổng quát cho người mới vắt đầu",
+      "description": "kiến thức cơ bản cho người mới"
+    },
+    {
+      "id": 2,
+      "name": "xây dựng  web với nodejs",
+      "description": "xây dựng  web trong thực tế"
+    }
+  ]
+}
